@@ -6,6 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
+    "build-bg": "ng build --output-path docs --base-href /17_Project_build/",
     "test": "ng test"
   },
   "private": true,
