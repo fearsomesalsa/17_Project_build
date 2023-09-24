@@ -1,0 +1,43 @@
+<section class="order" id="order" #orderElement>
+    <div class="container">
+      <div class="order-text">
+        <div class="order-text-title double-title">
+          <a routerLink="/order" [queryParams]="{product: formValues.productTitle + ' 1'}">Хватит думать!</a> Доставим заказ за 30 минут!
+        </div>
+        <div class="order-text-message" (click)="test()"> <!-- Сделаем так, что при нажатии на блок с текстом "order-text-message", мы будем отписываться от нашего Observable-объекта. -->
+          Мы гарантированно доставим вашу пиццу за 30 минут с момента оформления заказа. Если мы опоздаем даже на
+          1 минуту - вы получаете весь заказ бесплатно и ваучер на скидку на следующий заказ. Мы гордимся нашим
+          сервисом и сделаем всё, чтобы наш клиент был доволен и не остался голодный!
+        </div>
+      </div>
+      <div class="order-form">
+        <!-- Float Label -->
+        <span class="p-float-label">
+          <input type="text" class="order-input"  id="product-input"
+        pInputText [(ngModel)]="formValues.productTitle">
+          <label htmlFor="product-input">Пицца</label>
+        </span>
+        <span class="p-float-label">
+          <input type="text" class="order-input" id="address-input" name="address" pInputText [(ngModel)]="formValues.address">
+          <label htmlFor="address-input">Адрес доставки</label>
+        </span>
+        <span class="p-float-label">
+          <input type="text" class="order-input" id="phone-input" pInputText [(ngModel)]="formValues.phone">
+          <label htmlFor="phone-input">Телефон</label>
+        </span>
+
+        <!-- Для инпутов добавляем директиву pInputText -->
+        <!-- <input type="text" class="order-input"  id="product-input"
+        pInputText placeholder="Пицца" [(ngModel)]="formValues.productTitle">
+        <input type="text" class="order-input" id="address-input" name="address" pInputText placeholder="Адрес доставки" [(ngModel)]="formValues.address">
+        <input type="text" class="order-input" id="phone-input" pInputText placeholder="Телефон" [(ngModel)]="formValues.phone">        <button class="btn" (click)="createOrder()">Оформить заказ</button> -->
+        <button class="btn" tuiButton (click)="createOrder()">Оформить заказ</button>
+      </div>
+      <div class="order-image">
+        <img src="assets/images/pizzzzza.png" alt="Pizza">
+      </div>
+    </div>
+</section>
+
+<!-- Сделаем так, что при нажатии на блок с текстом "order-text-message", мы будем отписываться от нашего Observable-объекта. -->
+

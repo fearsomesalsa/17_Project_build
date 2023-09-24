@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Pizza</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts/gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+<app-root></app-root>
+
+</body>
+</html>
+
+<!-- Теперь лучше использовать header.component и footer.component не на уровне index.html, а на уровне нашего главного app.component, потому что теперь он является управляющим компонентом нашего шаблона.
+Логично, что если мы хотим отображать на каждой странцие хедер и футер, а в router-outlet у нас будет подставляться конкретный контент конкретного компонента, то хедер и футер нужно перетащить в app.component  -->

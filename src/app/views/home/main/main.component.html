@@ -1,0 +1,101 @@
+<section class="main">
+  <div class="container">
+    <div class="main-info">
+      <h1 class="double-title">
+        Самая лучшая пицца в мире
+        <span>только в Pizza Cheff</span>
+      </h1>
+      <div class="main-advantages">
+        <div class="main-advantage">
+          <div class="advantage-image">
+            <img src="assets/images/hop.png" alt="Hop" />
+          </div>
+          <div class="advantage-text">
+            <div class="advantage-title">Лучшее тесто</div>
+            <div class="advantage-description">
+              Мы создаем тесто только из отборной итальянской муки наивысшего
+              качества
+            </div>
+          </div>
+        </div>
+        <div class="main-advantage">
+          <div class="advantage-image">
+            <img src="assets/images/kitchen-pack.png" alt="Kitchen Pack" />
+          </div>
+          <div class="advantage-text">
+            <div class="advantage-title">лучшие повара</div>
+            <div class="advantage-description">
+              Пиццы готовят самые профессиональные итальянские повара
+            </div>
+          </div>
+        </div>
+        <div class="main-advantage">
+          <div class="advantage-image">
+            <img src="assets/images/seo-and-web.png" alt="Seo and Web" />
+          </div>
+          <div class="advantage-text">
+            <div class="advantage-title">гарантия качества</div>
+            <div class="advantage-description">
+              Наша пиццерия получила множество наград и признаний по всему миру
+            </div>
+          </div>
+        </div>
+        <div class="main-advantage">
+          <div class="advantage-image">
+            <img src="assets/images/holidays.png" alt="Holidays" />
+          </div>
+          <div class="advantage-text">
+            <div class="advantage-title">отборные рецепты</div>
+            <div class="advantage-description">
+              Мы используем рецепты от мировых лидеров в изготовлении пиццы
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-action">
+        <!--          <a class="btn" routerLink="/products">Выбрать пиццу</a> теперь по клику нужно не скроллить до блока с продуктами, а переводить на другую страницу &ndash;&gt;-->
+        <a class="btn" (click)="test()">Выбрать пиццу</a>
+        <!-- <a class="btn" (click)="test(popup)">Выбрать пиццу</a> -->
+        <!-- попробуем реализовать открытие попапа по нажатию на кнопку, как в примере из документации -->
+      </div>
+    </div>
+    <div class="main-image">
+      <img src="assets/images/pizza_big.png" alt="Bid pizza" />
+    </div>
+  </div>
+</section>
+
+<!-- <ng-template #popup>
+  заворачиваем в ng-template, чтобы передать в open() объект типа TemplateRef, создаем локальную переменную popup. В этой переменной у нас будет ng-template с типом TemplateRef с ссылкой на элемент этого шаблона
+  <div class="" tabindex="-1" id="myModal">
+    нужно убрать класс modal, потому что он по умолчанию имеет display: none;
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modal title</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <p>Modal body text goes here.</p>
+        </div>
+        <div class="modal-footer">
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template> -->
+
+<app-popup [data]="'main component'"></app-popup>
