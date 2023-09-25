@@ -68,12 +68,7 @@ export class MainComponent implements OnInit, OnDestroy, AfterViewInit {
   private popupComponent!: PopupComponent; // автоматически в эту переменую попадет наш попап <app-popup>, т.е. наш компонент
 
   ngAfterViewInit(): void {
-    // popup будем отображать не в ngOnInit(), а в ngAfterViewInit()
-    // this.modalService.open(this.popup, {});
-
-    // const modalRef = this.modalService.open(PopupComponent);
-    // modalRef.componentInstance.data = 'Main component';
-    this.popupComponent.open();
+    // this.popupComponent.open(); // Сделаем так, чтобы попап на главной не отображался
   }
 
   ngOnDestroy() {
